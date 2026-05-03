@@ -73,7 +73,7 @@ with st.container():
         )
 
 
-if st.button("✨ 어린이날 편지 작성하기"):
+if st.button("✨ 어린이날 메세지 작성하기"):
     with st.spinner("AI가 편지를 작성 중입니다..."):
         letter = get_ai_letter(name, gender, age, interest, length)
 
