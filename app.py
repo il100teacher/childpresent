@@ -24,7 +24,7 @@ def get_ai_letter(name, gender, age, interest, length_option):
     """
 
     response = client.chat.completions.create(
-        model="gpt-4o-mini",  # 💡 추천 모델
+        model="gpt-4o-mini",
         messages=[{"role": "user", "content": prompt}]
     )
 
@@ -87,6 +87,7 @@ if st.button("✨ 결과 보기"):
         st.divider()
         st.subheader(f"🎁 {interest} 추천 선물")
 
+        # 선물 리스트 출력
         for p in get_products(interest):
             col1, col2 = st.columns([4,1])
             with col1:
@@ -94,3 +95,6 @@ if st.button("✨ 결과 보기"):
                 st.caption(p['price'])
             with col2:
                 st.link_button("보기", p['link'])
+        
+        # 📢 공정위 문구 추가 (선물 리스트 하단)
+        st.caption("이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.")
