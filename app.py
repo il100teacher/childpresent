@@ -79,7 +79,7 @@ if st.button("✨ 결과 보기"):
 
         st.markdown(f"""
         <div style="background-color: #f0f2f6; padding: 25px; border-radius: 15px;">
-            <h4>💝 {name}를 위한 편지</h4>
+            <h4>💝 {name} 어린이날 편지</h4>
             <p>{letter.replace('\n', '<br>')}</p>
         </div>
         """, unsafe_allow_html=True)
